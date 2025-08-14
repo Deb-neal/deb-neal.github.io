@@ -1,11 +1,16 @@
 import React from 'react';
 import './About.css';
 import awsBadge from '../../images/aws.png';
+import portfolio from '../../images/portfolio.png';
 
 function About() {
   return (
     <div>
-      <section id='colorlib-hero' />
+      <section id='colorlib-hero'>
+        <div className='hero-content'>
+          <img src={portfolio} alt='Profile' className='profile-image' />
+        </div>
+      </section>
       <section className='colorlib-about' data-section='about'>
         <div className='colorlib-narrow-content'>
           <div className='row'>
@@ -26,55 +31,53 @@ function About() {
                       />
                     </div>
                     <p>
-                      <strong>안녕하세요. 백엔드 개발자 안민수입니다.</strong>
+                      <strong>
+                        메타버스 플랫폼 백엔드 인프라를 담당하는 풀스택
+                        개발자입니다.
+                      </strong>
                     </p>
                     <p>
-                      현재, (주) 살린이라는 회사에 입사해서, 백엔드 개발자로
-                      근무하고있습니다. 회사내, 프로젝트에서 메인 백앤드로서,
-                      api, socket 서버의 구축, aws 기반으로 인프라구축, openai를
-                      활용한 ai프로젝트 진행등 서버와 인프라를 담당하고있습니다.
+                      <strong>🎯 핵심 성과</strong>
+                      <br />• AWS→KT Cloud 인프라 마이그레이션으로{' '}
+                      <strong>TPS 20→102 (410% 성능 향상)</strong>
+                      <br />• TypeORM 버전업그레이드로{' '}
+                      <strong>빌드 속도 40% 단축</strong>
+                      <br />
+                      • OpenAI Assistant API 기반 AI 챗봇 플랫폼 구축 및
+                      서비스화
+                      <br />• Socket.io 실시간 통신으로{' '}
+                      <strong>동시 접속자 100명 + 안정화</strong>
                       <br />
                       <br />
-                      그외, 웹 페이지 개발중 express와 Mysql, JWT를 통해
-                      데이터베이스를 구축해본 경험과, Socket.io를 이용한 라이브
-                      스트리밍 사이트를 구현해본 경험이 있습니다.
+                      <strong>🔧 주요 기술 스택</strong>
+                      <br />• <strong>Backend:</strong> NestJS, Express,
+                      Node.js, Socket.io
+                      <br />• <strong>Database:</strong> MySQL, MongoDB, Redis
+                      (캐싱 전략)
+                      <br />• <strong>Infrastructure:</strong> AWS, KT Cloud,
+                      Docker, Jenkins CI/CD
+                      <br />• <strong>AI/ML:</strong> OpenAI API, Vector Store,
+                      Function Calling
                       <br />
                       <br />
-                      빠르게 변하는 시대, 각광받고있는 새로운 기술들, 바뀌는
-                      시대에 따라가기보다 그 시대를 제 손으로 만들어보고 싶다는
-                      생각이 들었고 미련없이 하던일을 그만두고 IT업계에 발을
-                      들이게 되었습니다. 처음 발을 내딛고 든 생각은 이전에 하던
-                      일인 요리와 비슷하다고 생각했습니다.
+                      <strong>🚀 특별한 배경</strong>
                       <br />
-                      <br />
-                      요리에는 전체적인 흐름과 그 안에 세부적인 작업순서, 그리고
-                      커뮤니케이션이 존재합니다.{' '}
+                      요리사에서 개발자로 전향한 독특한 이력을 가지고 있습니다.
+                      주방에서 배운{' '}
                       <strong>
-                        타 직군과 다르게 불을쓰고, 칼을쓰는 그런 위험에
-                        직접적으로 마주하고, 코스 하나를 위해 각자 분담하고 있는
-                        요리 진행상황을 보고하는 그런 커뮤니케이션, 그리고 모든
-                        일과가 종료된 후 본인만의 독창적인 요리를 만들기 위해
-                        노력했던 시간들
-                      </strong>{' '}
-                      이런 시간들을 뒤로하고 부트캠프 코드스테이츠라는 곳에
-                      지원하게되었습니다. 처음 마주하는 검은 화면과, 윈도우가
-                      아닌 새로운 운영체체 Ubuntu, 그리고 수많은 영어들 익숙하지
-                      않았기에 당황도 했고 적응하는데 시간도 많이 걸렸습니다.
-                      남들보다 시작점이 달랐기에 그만큼 더 노력이 필요하다고
-                      생각되었고, 끊임없이 노력했습니다.
-                      <br />
-                      <br />그 노력을 통해 깨달은것은 마치 이 과정이 하나의
-                      코스를 만드는 과정과 비슷하다는 사실이였습니다. 여러
-                      사람이 모여 하나의 프로젝트를 위해 파트를 나눠가지며,
-                      끊임없이 소통하고, 진행상황을 보고하며 완성품을 위해
-                      달려가는 이 과정이 매우 흡사했습니다. 그러다보니 이 분야에
-                      대해 매우 만족하며, 잘 맞다는 생각을 하게되었습니다.
-                      <br />
-                      <br />
-                      <strong>
-                        또한 코더가 아닌 개발자라는 말을 당당하게
-                        말할수있을정로도 노력하고 발전하려고 합니다.
+                        위기 상황 대처능력, 팀워크, 완벽한 타이밍 관리
                       </strong>
+                      가 현재 시스템 아키텍처 설계와 장애 대응에 큰 도움이 되고
+                      있습니다.
+                      <br />
+                      <br />
+                      <strong>🎯 개발 철학</strong>
+                      <br />
+                      단순히 기능을 구현하는 것이 아닌,{' '}
+                      <strong>비즈니스 임팩트를 만드는 개발자</strong>가 되고자
+                      합니다. 성능 최적화, 사용자 경험, 그리고 확장 가능한
+                      아키텍처를 통해 실질적인 가치를 창출하는 것이 저의
+                      목표입니다.
                     </p>
                   </div>
                 </div>

@@ -8,7 +8,8 @@ import studeaming from '../../images/studeaming.png';
 import localo from '../../images/localo.png';
 import gyeongbuk from '../../images/gyeongbuk.png';
 import aisurvey from '../../images/aisurvey.png';
-import aitalkerRss from '../../images/aitalkerRss.png';
+
+import ian from '../../images/ian.png';
 import './Projects.css';
 
 const Project = ({
@@ -75,7 +76,7 @@ Project.propTypes = {
 function Projects() {
   const projects = [
     {
-      image: aitalkerRss,
+      image: ian,
       url: 'https://aitalker.co.kr/ms1993/2553',
       title: 'AI Talker 서비스 고도화',
       subtitle:
@@ -109,6 +110,28 @@ function Projects() {
       animation: 'fadeInLeft',
     },
     {
+      image: gyeongbuk,
+      url: 'https://gb.go.kr/metaport',
+      title: '경북메타포트 (GB metaport)',
+      subtitle:
+        '2023.03 ~ 진행 중 | 경북도청을 모티브로 한 메타버스 서비스 구축 국가사업',
+      description:
+        'AWS에서 KT Cloud로 인프라 마이그레이션 및 TypeORM 0.2→0.3 업그레이드를 통한 성능 개선. Redis 기반 캐싱 전략 도입과 JMeter 부하 테스트로 시스템 안정성을 검증하여 TPS 20→102까지 성능을 향상시켰습니다.',
+      links: [
+        {
+          url: 'https://play.google.com/store/apps/details?id=com.salin.GBMeta&pcampaignid=web_share',
+          text: '안드로이드 다운로드',
+          icon: 'icon-data',
+        },
+        {
+          url: 'https://gb.go.kr/metaport',
+          text: '웹 서비스 바로가기',
+          icon: 'icon-data',
+        },
+      ],
+      animation: 'fadeInLeft',
+    },
+    {
       image: readyplay,
       url: 'https://www.readyplay.co.kr/',
       title: 'Readyplay',
@@ -123,7 +146,7 @@ function Projects() {
           icon: 'icon-data',
         },
       ],
-      animation: 'fadeInLeft',
+      animation: 'fadeInRight',
     },
     {
       image: localo,
@@ -145,29 +168,7 @@ function Projects() {
           icon: 'icon-data',
         },
       ],
-      animation: 'fadeInRight',
-    },
-    {
-      image: gyeongbuk,
-      url: 'https://gb.go.kr/metaport',
-      title: '경북메타포트 (GB metaport)',
-      subtitle:
-        '2023.03 ~ 진행 중 | 경북도청을 모티브로 한 메타버스 서비스 구축 국가사업',
-      description:
-        'AWS에서 KT Cloud로 인프라 마이그레이션 및 TypeORM 0.2→0.3 업그레이드를 통한 성능 개선. Redis 기반 캐싱 전략 도입과 JMeter 부하 테스트로 시스템 안정성을 검증하여 TPS 20→102까지 성능을 향상시켰습니다.',
-      links: [
-        {
-          url: 'https://play.google.com/store/apps/details?id=com.salin.GBMeta&pcampaignid=web_share',
-          text: '안드로이드 다운로드',
-          icon: 'icon-data',
-        },
-        {
-          url: 'https://gb.go.kr/metaport',
-          text: '웹 서비스 바로가기',
-          icon: 'icon-data',
-        },
-      ],
-      animation: 'fadeInRight',
+      animation: 'fadeInLeft',
     },
   ];
 

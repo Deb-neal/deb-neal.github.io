@@ -4,18 +4,23 @@
   box-sizing: border-box;
 }
 
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: #ffffff;
-  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+  color: var(--text-primary);
+  font-family: var(--font-primary);
   font-weight: 600;
   margin: 0 0 30px 0;
-  letter-spacing: 0.03em;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  letter-spacing: 0.02em;
 }
 
 .hire h3 {
@@ -46,7 +51,7 @@ h3 {
   max-width: 100%;
   min-height: 100vh;
   margin: 0 auto;
-  background: linear-gradient(135deg, #0f1419 0%, #1a1a2e 50%, #16213e 100%);
+  background: var(--bg-primary);
   display: flex;
   flex-direction: row;
   position: relative;
@@ -61,25 +66,21 @@ h3 {
 } */
 
 #colorlib-aside {
-  padding-top: 3em;
-  padding-bottom: 40px;
+  padding: var(--space-8) var(--space-4);
   text-align: center;
-  width: 300px;
+  width: 280px;
   min-height: 100vh;
   height: 100%;
   position: sticky;
   top: 0;
   overflow-y: auto;
   z-index: 1001;
-  background: linear-gradient(180deg, #0a0e13 0%, #1a1a2e 100%);
-  border-right: 1px solid rgba(0, 245, 255, 0.2);
-  backdrop-filter: blur(20px);
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  background: var(--bg-surface);
+  border-right: 1px solid var(--border-light);
+  transition: var(--transition-normal);
   display: flex;
   flex-direction: column;
-  box-shadow: 5px 0 20px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--shadow-sm);
 }
 
 /* 사이드바 */
@@ -98,29 +99,36 @@ h3 {
 } */
 
 #colorlib-aside .author-img {
-  width: 150px;
-  height: 150px;
-  margin: 0 auto;
-  margin-bottom: 30px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto var(--space-6) auto;
+  border-radius: var(--radius-full);
+  border: 3px solid var(--border-light);
+  transition: var(--transition-normal);
+}
+
+#colorlib-aside .author-img:hover {
+  border-color: var(--color-primary);
+  transform: scale(1.02);
 }
 
 #colorlib-aside #colorlib-logo {
-  font-weight: 700;
-  font-size: 22px;
-  margin-bottom: 0.5em;
+  font-weight: var(--font-bold);
+  font-size: 1.375rem;
+  margin-bottom: var(--space-2);
   display: block;
   width: 100%;
+  color: var(--text-primary);
 }
 
 #colorlib-aside .position {
   display: block;
-  margin-bottom: 2em;
-  font-size: 12px;
+  margin-bottom: var(--space-8);
+  font-size: 0.8rem;
+  font-weight: var(--font-medium);
+  color: var(--text-secondary);
   text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 #colorlib-aside #colorlib-main-menu {
@@ -150,22 +158,37 @@ ul {
 
 #colorlib-aside #colorlib-main-menu ul li {
   text-align: center;
-  margin: 0 0 10px 0;
+  margin: 0 0 var(--space-1) 0;
   padding: 0;
   list-style: none;
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 0.875rem;
+  font-weight: var(--font-medium);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.025em;
+}
+
+#colorlib-aside #colorlib-main-menu ul li a {
+  display: block;
+  padding: var(--space-3) var(--space-4);
+  color: var(--text-secondary);
+  border-radius: var(--radius-lg);
+  transition: var(--transition-normal);
+  text-decoration: none;
+}
+
+#colorlib-aside #colorlib-main-menu ul li a:hover,
+#colorlib-aside #colorlib-main-menu ul li.active a {
+  color: var(--color-primary);
+  background: var(--bg-secondary);
 }
 
 #colorlib-main {
-  width: calc(100% - 300px);
+  width: calc(100% - 280px);
   flex: 1;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  background: var(--bg-primary);
+  transition: var(--transition-normal);
   overflow-x: hidden;
+  color: var(--text-primary);
 }
 
 /* 메인 컨텐츠 영역 */
@@ -185,23 +208,23 @@ ul {
 }
 
 #colorlib-main .colorlib-about {
-  padding-top: 4em;
-  padding-bottom: 4em;
+  padding: var(--space-16) var(--space-6);
   clear: both;
   width: 100%;
   display: block;
+  background: var(--bg-primary);
+  color: var(--text-primary);
 }
 
 .heading-meta {
-  margin-bottom: 15px;
+  margin-bottom: var(--space-4);
   display: block;
-  font-size: 11px;
+  font-size: 0.75rem;
   text-transform: uppercase;
-  color: #00f5ff;
-  font-weight: 500;
-  letter-spacing: 5px;
-  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
-  text-shadow: 0 0 10px rgba(0, 245, 255, 0.8);
+  color: var(--text-accent);
+  font-weight: var(--font-semibold);
+  letter-spacing: 0.1em;
+  font-family: var(--font-primary);
 }
 
 .row {
@@ -337,10 +360,10 @@ ul {
 }
 
 .panel-default > .panel-heading {
-  color: #e0e6ed;
-  background: linear-gradient(135deg, rgba(0, 245, 255, 0.1), rgba(255, 0, 255, 0.1));
-  border-color: rgba(0, 245, 255, 0.3);
-  backdrop-filter: blur(10px);
+  color: var(--text-primary);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
 }
 
 .panel-group .panel-heading {
@@ -359,20 +382,25 @@ ul {
 }
 
 .panel-heading a {
-  padding: 20px 25px;
+  padding: var(--space-5) var(--space-6);
   display: block;
   width: 100%;
-  font-weight: 700;
-  font-size: 14px;
-  letter-spacing: 1px;
+  font-weight: var(--font-semibold);
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
-  background-color: #008080;
-  color: #ffffff;
+  font-family: var(--font-primary);
+  background: var(--color-primary);
+  color: var(--color-white);
   position: relative;
-  box-shadow: none;
-  aria-expanded: true;
-  aria-control: 'collapseOne';
+  border-radius: var(--radius-lg);
+  transition: var(--transition-normal);
+}
+
+.panel-heading a:hover {
+  background: var(--color-primary-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
 }
 
 .collapse.in {
@@ -380,29 +408,36 @@ ul {
 }
 
 .panel-body {
-  padding: 1.5em;
-  margin-top: 5px;
-  border: 1px solid rgba(0, 245, 255, 0.2);
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(20px);
-  border-radius: 10px;
+  padding: var(--space-6);
+  margin-top: var(--space-2);
+  border: 1px solid var(--border-light);
+  background: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  color: var(--text-primary);
 }
 
 .panel-default {
   margin: 20px;
 }
 
-/* 여기는 프로젝트 */
-
+/* Project Styles */
 .project {
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
   position: relative;
   height: 300px;
   width: 100%;
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: var(--space-8);
+  transition: var(--transition-normal);
+  overflow: hidden;
+}
+
+.project:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-medium);
 }
 
 .project .desc .con {
@@ -430,9 +465,10 @@ ul {
   bottom: 0;
   left: 0;
   right: 0;
-  background: #2b5797;
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
   opacity: 0;
-  transition: 1s;
+  transition: var(--transition-normal);
 }
 
 .project:hover .desc {
@@ -441,23 +477,14 @@ ul {
 
 .project .desc .con span {
   display: block;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 13px;
-  transition:
-    opacity 0.3s,
-    -webkit-transform 0.3s;
-  transition:
-    transform 0.3s,
-    opacity 0.3s;
-  transition:
-    transform 0.3s,
-    opacity 0.3s,
-    -webkit-transform 0.3s;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  transition: var(--transition-normal);
   transform: translate3d(0, 15px, 0);
 }
 
 .project .desc h3 a {
-  color: #fff;
+  color: var(--text-primary);
 }
 
 .project .desc .con .icon {
@@ -480,16 +507,16 @@ ul {
 }
 
 a {
-  color: #00f5ff;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-  text-shadow: 0 0 5px rgba(0, 245, 255, 0.5);
+  color: var(--text-accent);
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+  text-decoration: none;
 }
 
 a:hover {
-  color: #ff00ff;
-  text-shadow: 0 0 10px rgba(255, 0, 255, 0.8);
+  color: var(--accent-cyan);
+  text-decoration: none;
 }
 
 h1,
@@ -498,12 +525,11 @@ h3,
 h4,
 h5,
 h6 {
-  color: #ffffff;
-  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+  color: var(--text-primary);
+  font-family: var(--font-primary);
   font-weight: 600;
   margin: 0 0 30px 0;
-  letter-spacing: 0.03em;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  letter-spacing: 0.02em;
 }
 
 h1,

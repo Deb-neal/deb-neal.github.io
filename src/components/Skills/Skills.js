@@ -10,7 +10,7 @@ function Skills() {
           <div className='col-md-6 col-md-offset-3 col-md-pull-3 animate-box fadeInLeft'>
             <span className='heading-meta'>TECH SKILLS</span>
             <h2 className='colorlib-heading animate-box fadeInUp'>
-              저는 지금 이것을 할 수 있습니다.
+              What I Can Do Now
             </h2>
           </div>
         </div>

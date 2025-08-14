@@ -1,108 +1,282 @@
-/* src/components/Projects/Projects.css */
+/* Projects Component - Contemporary Clean Style */
 
-.project {
-  background-color: #0f1923;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+.colorlib-about[data-section='projects'] {
+  background: #f8fafc !important;
+  min-height: 100vh;
+  padding: 5rem 1.5rem;
+}
+
+.colorlib-narrow-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.heading-meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  display: block;
+  color: #2563eb !important;
+  background: none;
+  -webkit-text-fill-color: unset;
+}
+
+.colorlib-heading {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 2.5rem;
+  font-weight: 700;
   margin-bottom: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #000000 !important;
+  line-height: 1.15;
+  background: none;
+  -webkit-text-fill-color: unset;
+  text-align: center;
+  letter-spacing: -0.02em;
 }
 
-.project:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -20px;
 }
 
-.project-image {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-bottom: 1px solid #eee;
-}
-
-.desc {
+.col-md-6 {
+  flex: 0 0 100%;
+  max-width: 100%;
   padding: 20px;
 }
 
+.project {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+  border: 1px solid #e2e8f0;
+  height: auto;
+  display: flex;
+  align-items: stretch;
+}
+
+.project:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border-color: #cbd5e1;
+}
+
+.project-image {
+  width: 300px;
+  min-width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-right: 1px solid #e2e8f0;
+}
+
+.desc {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
 .project-title {
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: #f8f9fa;
+  margin-bottom: 0.75rem;
+  color: #000000 !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+}
+
+.project-title a {
+  color: #000000 !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-title a:hover {
+  color: #2563eb !important;
 }
 
 .project-subtitle {
-  font-size: 1rem;
-  color: #00b2a9;
-  margin-bottom: 0.8rem;
+  font-size: 0.875rem;
+  color: #6b7280 !important;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
 }
 
 .project-description {
   font-size: 0.95rem;
   line-height: 1.6;
-  color: #c5d1dc;
+  color: #374151 !important;
+  margin-bottom: 1.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
 }
 
 .project-links {
   margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
 .project-link {
-  display: inline-block;
-  margin-right: 1rem;
-  color: #008080;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: #f3f4f6;
+  color: #2563eb !important;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.2s ease;
+  font-size: 0.875rem;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
 }
 
 .project-link:hover {
-  color: #00b2a9;
+  background: #2563eb;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.project-link i {
+  margin-right: 0.5rem;
+  font-size: 0.875rem;
 }
 
 .btn-load-more {
-  padding: 10px 24px;
+  padding: 0.75rem 2rem;
   font-size: 1rem;
   border-radius: 8px;
-  background-color: #008080;
+  background: #2563eb;
   border: none;
-  color: #ffffff;
-  transition: background-color 0.3s ease;
+  color: #ffffff !important;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
 }
 
 .btn-load-more:hover {
-  background-color: #006666;
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive styles */
+.btn-load-more:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Animation classes */
+.animate-box {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.animated {
+  opacity: 1;
+}
+
+.fadeInLeft {
+  animation: fadeInLeft 0.5s ease forwards;
+}
+
+.fadeInRight {
+  animation: fadeInRight 0.5s ease forwards;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Design */
 @media screen and (max-width: 992px) {
+  .colorlib-about[data-section='projects'] {
+    padding: 3rem 1rem;
+  }
+  
+  .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
   .project {
     margin-bottom: 1.5rem;
+    flex-direction: column;
+  }
+  
+  .project-image {
+    width: 100%;
+    min-width: auto;
+    border-right: none;
+    border-bottom: 1px solid #e2e8f0;
   }
   
   .desc {
-    padding: 15px;
+    padding: 1.25rem;
   }
 }
 
 @media screen and (max-width: 576px) {
+  .colorlib-about[data-section='projects'] {
+    padding: 2rem 0.75rem;
+  }
+  
+  .colorlib-heading {
+    font-size: 2rem;
+  }
+  
   .project-title {
-    font-size: 1.2rem;
+    font-size: 1.125rem;
   }
   
   .project-subtitle {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
   
   .project-description {
-    font-size: 0.85rem;
+    font-size: 0.875rem;
   }
   
   .desc {
-    padding: 12px;
+    padding: 1rem;
+  }
+  
+  .project-links {
+    flex-direction: column;
+  }
+  
+  .project-link {
+    justify-content: center;
+    text-align: center;
   }
 }
