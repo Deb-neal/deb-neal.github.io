@@ -37,7 +37,7 @@ function About() {
                       </strong>
                     </p>
                     <p>
-                      <strong>🎯 핵심 성과</strong>
+                      <strong>핵심 성과</strong>
                       <br />• AWS→KT Cloud 인프라 마이그레이션으로{' '}
                       <strong>TPS 20→102 (410% 성능 향상)</strong>
                       <br />• TypeORM 버전업그레이드로{' '}
@@ -49,7 +49,7 @@ function About() {
                       <strong>동시 접속자 100명 + 안정화</strong>
                       <br />
                       <br />
-                      <strong>🔧 주요 기술 스택</strong>
+                      <strong>주요 기술 스택</strong>
                       <br />• <strong>Backend:</strong> NestJS, Express,
                       Node.js, Socket.io
                       <br />• <strong>Database:</strong> MySQL, MongoDB, Redis
@@ -60,7 +60,7 @@ function About() {
                       Function Calling
                       <br />
                       <br />
-                      <strong>🚀 특별한 배경</strong>
+                      <strong>특별한 배경</strong>
                       <br />
                       요리사에서 개발자로 전향한 독특한 이력을 가지고 있습니다.
                       주방에서 배운{' '}
@@ -71,7 +71,7 @@ function About() {
                       있습니다.
                       <br />
                       <br />
-                      <strong>🎯 개발 철학</strong>
+                      <strong>개발 철학</strong>
                       <br />
                       단순히 기능을 구현하는 것이 아닌,{' '}
                       <strong>비즈니스 임팩트를 만드는 개발자</strong>가 되고자
