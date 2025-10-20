@@ -249,20 +249,43 @@
   .header-content {
     padding: var(--spacing-lg);
   }
-  
+
   .header-title {
     font-size: 2rem;
   }
-  
+
   .header-subtitle {
     font-size: 1.1rem;
   }
-  
+
   .stat-number {
     font-size: 1.8rem;
   }
-  
+
   .floating-element {
     display: none;
   }
+}
+
+/* Version Badge in Header */
+.version-badge-header {
+  display: inline-block;
+  padding: 4px 10px;
+  margin: 8px 0 12px 0;
+  font-size: 10px;
+  font-weight: var(--font-medium);
+  color: var(--text-secondary);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  font-family: var(--font-mono);
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+  transition: var(--transition-normal);
+}
+
+.version-badge-header:hover {
+  opacity: 1;
+  border-color: var(--border-medium);
+  transform: scale(1.05);
 }
