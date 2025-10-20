@@ -8,6 +8,7 @@ import studeaming from '../../images/studeaming.png';
 import localo from '../../images/localo.png';
 import gyeongbuk from '../../images/gyeongbuk.png';
 import aisurvey from '../../images/aisurvey.png';
+import aihighlight from '../../images/aihighlight.png';
 
 import ian from '../../images/ian.png';
 import './Projects.css';
@@ -75,6 +76,23 @@ Project.propTypes = {
 
 function Projects() {
   const projects = [
+    {
+      image: aihighlight,
+      url: 'https://aihi.mirrordays.com/',
+      title: 'AI Highlight 초기 서비스 구축',
+      subtitle:
+        '2025.03 ~ 진행 중 | yd-dlp라는 라이브러리를 활용한 유튜브 요약 서비스',
+      description:
+        '유튜브 요약 서비스를 개발하며, GCP 프록시 인프라, yCI/CD 파이프라인, 로깅·모니터링 시스템을 구축하여 안정적이고 자동화된 서비스 환경을 구현했습니다.',
+      links: [
+        {
+          url: 'https://aihi.mirrordays.com/',
+          text: '서비스 바로가기',
+          icon: 'icon-data',
+        },
+      ],
+      animation: 'fadeInLeft',
+    },
     {
       image: ian,
       url: 'https://aitalker.co.kr/ms1993/2553',
