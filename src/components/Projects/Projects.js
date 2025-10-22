@@ -7,6 +7,7 @@ import readyplay from '../../images/readyplay.png';
 import studeaming from '../../images/studeaming.png';
 import localo from '../../images/localo.png';
 import gyeongbuk from '../../images/gyeongbuk.png';
+import gyeongbukcms from '../../images/gyeongbukcms.png';
 import aisurvey from '../../images/aisurvey.png';
 import aihighlight from '../../images/aihighlight.png';
 
@@ -134,7 +135,7 @@ function Projects() {
       solution:
         'GCP 기반 프록시 인프라를 구축하여 IP 분산 처리. Jenkins를 활용한 CI/CD 파이프라인 자동화로 배포 프로세스 개선',
       result:
-        '유튜브 다운로드 성공률 95% 이상 달성. 배포 시간 30분→5분으로 83% 단축. 장애 대응 시간 60% 감소',
+        '유튜브 다운로드 성공률 95% 이상 달성. 배포 시간 단축 및 자동화. 장애 대응 시간 감소',
       links: [
         {
           url: 'https://aihi.mirrordays.com/',
@@ -156,7 +157,7 @@ function Projects() {
       solution:
         'OpenAI Vector Store를 활용한 파일 기반 학습 시스템 구축으로 사용자별 문서 업로드 및 질의응답 기능 구현. Function Calling을 통해 대화 맥락 분석 후 외부 API(날씨, 뉴스 등) 자동 호출 트리거 로직 개발',
       result:
-        '사용자별 커스텀 AI 어시스턴트 생성 가능. 외부 데이터 연동으로 실시간 정보 제공 기능 추가, 사용자 만족도 40% 향상',
+        '사용자별 커스텀 AI 어시스턴트 생성 가능. 외부 데이터 연동으로 실시간 정보 제공 기능 추가, 다양한 기능 추가',
       links: [
         {
           url: 'https://aitalker.co.kr/ms1993/2553',
@@ -178,7 +179,7 @@ function Projects() {
       solution:
         '서비스 요구사항 분석 후 정규화된 데이터베이스 ERD 설계 및 구축. Jenkins 기반 CI/CD 파이프라인 구축으로 코드 푸시 시 자동 빌드, 테스트, 배포 환경 구성. AI 기반 대화형 설문 생성 프로토타입 완성',
       result:
-        '사업화 검증 완료 및 투자 유치 성공. 배포 자동화로 개발 생산성 50% 향상. 확장 가능한 DB 구조로 향후 기능 추가 용이',
+        '사업화 검증 완료, 배포 자동화로 개발 생산성 50% 향상. 확장 가능한 DB 구조로 향후 기능 추가 용이',
       links: [
         {
           url: 'https://aisurvey.mirrordays.com/',
@@ -186,6 +187,69 @@ function Projects() {
           icon: 'icon-data',
         },
       ],
+      animation: 'fadeInLeft',
+    },
+    {
+      image: gyeongbukcms,
+      screenshots: [
+        {
+          src: '/images/gyeongbukcms.png',
+          alt: 'CMS 대시보드 - 실시간 통계 및 콘텐츠 관리',
+          caption:
+            '직관적인 대시보드로 누적 방문자, 신규 가입자 등 핵심 지표를 한눈에 확인',
+        },
+        {
+          src: '/images/gyeongbukstatic.png',
+          alt: '신공항 방문자 통계 - 날짜별 필터링 및 데이터 시각화',
+          caption:
+            '복잡한 메타버스 방문 데이터를 차트로 시각화, CSV 내보내기 지원',
+        },
+      ],
+      url: 'https://gb.go.kr:8143/metaportCMS',
+      title: '경북메타포트 관리자 CMS 개발',
+      contribution: 100,
+      subtitle: '2023.03 ~ 2025.12 | React 기반 메타버스 콘텐츠 관리 시스템',
+
+      problem: `경북도청 메타버스 서비스 운영 시 발생한 문제:
+    - 개발자가 직접 DB를 수정해야 콘텐츠 업데이트 가능
+    - 비개발자(기획자, 운영진)가 콘텐츠를 관리할 수 없음
+    - 공공기관 서비스 특성상 강화된 보안 요구사항 필요
+    - 긴급 콘텐츠 변경 시 개발자 대기 필요 → 운영 비효율`,
+
+      solution: `React + NestJS 기반 관리자 CMS 구축 및 보안 강화
+    - Frontend: React, TypeScript, React Query, Tailwind CSS
+    - Backend: NestJS REST API 설계 및 구현
+    - Infra: AWS → KT Cloud 마이그레이션
+    - Security: 
+      - IP 화이트리스트 기반 접근 제어 구현
+      - 도청 내부망에서만 접근 가능하도록 제한
+      - KT Cloud 방화벽 정책 설정 및 관리
+    - 복잡한 메타버스 콘텐츠 데이터를 직관적인 UI로 표현`,
+
+      result: `콘텐츠 관리 효율성 및 보안성 향상:
+    - 콘텐츠 업데이트 시간: 평균 10분 → 3분 (90% 단축)
+    - 비개발자도 실시간 콘텐츠 수정 가능
+    - 개발자 리소스 절약: 주 10시간 → 운영 업무에서 해방
+    - 보안 강화: IP 제한으로 무단 접근 차단, 공공기관 보안 요구사항 충족
+    - 긴급 대응 시간 단축: 당일 대응 가능`,
+
+      links: [
+        {
+          url: 'https://gb.go.kr:8143/metaportCMS',
+          text: 'CMS 관리자 페이지 (IP 제한)',
+          icon: 'icon-data',
+        },
+      ],
+
+      techDetails: `기술적 의사결정 및 구현:
+    - React Query 선택 이유: 서버 상태 관리 및 캐싱 최적화
+    - Tailwind CSS 도입: 빠른 프로토타이핑과 일관된 디자인 시스템
+    - KT Cloud 마이그레이션: 공공기관 보안 요구사항 충족
+    - IP 화이트리스트 구현: 
+      - KT Cloud 방화벽에서 허용된 IP 대역만 접근 가능
+      - 도청 사무실 + 개발팀 IP만 화이트리스트 등록
+      - 인프라 레벨 보안으로 애플리케이션 보안 부담 감소`,
+
       animation: 'fadeInLeft',
     },
     {
@@ -221,7 +285,7 @@ function Projects() {
       title: 'Readyplay',
       contribution: 50,
       subtitle:
-        '가상공간을 통해, 공간에 구애받지 않고 어디서든 만날 수 있는 메타버스 프로젝트',
+        '가상공간을 통해, 공간에 구애받지 않고 어디서든 만날 수 있는 메타버스 프로젝트 / 서비스 종료',
       problem:
         'PC와 모바일 플랫폼 간 실시간 동기화 이슈로 사용자 경험 불일치. 멀티플랫폼 환경에서 동일한 메타버스 경험 제공 필요',
       solution:
@@ -243,7 +307,7 @@ function Projects() {
       title: '로컬로 (Localro)',
       contribution: 100,
       subtitle:
-        '2022.03 ~ 2023.11 | 창원시 어시장을 모티브로 한 메타버스 커머스 서비스',
+        '2022.03 ~ 2023.11 | 창원시 어시장을 모티브로 한 메타버스 커머스 서비스 / 서비스 종료',
       problem:
         '초기 개발된 API 서버의 안정성 부족 및 인증 시스템 미비. AWS 인프라 비용 최적화 필요',
       solution:
