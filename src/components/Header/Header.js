@@ -16,7 +16,7 @@ function Header() {
         <div className='text center'>
           <img src={picture1} className='author-img' alt='Min su Ann'></img>
           <h1 id='colorlib-logo'>Min su Ann</h1>
-          <div className='version-badge-header'>v2.0</div>
+          <div className='version-badge-header'>v3.0</div>
           <span className='position'>Backend Engineer</span>
         </div>
         <nav id='colorlib-main-menu' role='navigation' className='navbar'>

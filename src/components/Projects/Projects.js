@@ -10,6 +10,7 @@ import gyeongbuk from '../../images/gyeongbuk.png';
 import gyeongbukcms from '../../images/gyeongbukcms.png';
 import aisurvey from '../../images/aisurvey.png';
 import aihighlight from '../../images/aihighlight.png';
+import naverblog from '../../images/naverblog.png';
 
 import ian from '../../images/ian.png';
 import './Projects.css';
@@ -123,6 +124,28 @@ Project.propTypes = {
 
 function Projects() {
   const projects = [
+    {
+      image: naverblog,
+      url: 'http://jenkins.salin.co.kr:7778/',
+      title: '네이버 블로그 텍스트&이미지 추출기',
+      contribution: 100,
+      subtitle:
+        '네이버 URL을 통해 그 블로그에 있는 텍스트와 이미지를 추출하는 서비스',
+      problem:
+        '기획자들이 블로그 글을 작성할 때 텍스트와 이미지를 추출하는 작업을 수동으로 하고 있어 시간이 오래 걸리고 비효율적이다.',
+      solution:
+        '수동하는 작업의 시간을 줄이기 위해 Python을 통해 네이버 블로그 내용을 크롤링하여, 텍스트와 이미지를 추출하는 서비스를 구축하였다.',
+      result:
+        '수동으로 진행하던 작업을, url 입력한번으로 자동으로 추출하는 서비스를 구축하였다.',
+      links: [
+        {
+          url: 'http://jenkins.salin.co.kr:7778/',
+          text: '서비스 바로가기',
+          icon: 'icon-data',
+        },
+      ],
+      animation: 'fadeInLeft',
+    },
     {
       image: aihighlight,
       url: 'https://aihi.mirrordays.com/',
