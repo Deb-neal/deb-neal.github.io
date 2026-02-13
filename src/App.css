@@ -182,6 +182,27 @@ ul {
   background: var(--bg-secondary);
 }
 
+/* Sub-menu styling */
+#colorlib-aside #colorlib-main-menu ul li.sub-menu {
+  font-size: 0.775rem;
+}
+
+#colorlib-aside #colorlib-main-menu ul li.sub-menu {
+  margin-top: -2px;
+}
+
+#colorlib-aside #colorlib-main-menu ul li.sub-menu a {
+  padding-left: 3.25rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015em;
+  opacity: 0.7;
+}
+
+#colorlib-aside #colorlib-main-menu ul li.sub-menu a:hover,
+#colorlib-aside #colorlib-main-menu ul li.sub-menu.active a {
+  opacity: 1;
+}
+
 #colorlib-main {
   width: calc(100% - 280px);
   flex: 1;

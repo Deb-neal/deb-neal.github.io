@@ -9,6 +9,7 @@ import Skills from './components/Skills/Skills.js';
 import Projects from './components/Projects/Projects.js';
 import Education from './components/Education/Education.js';
 import Contact from './components/Contact/Contact.js';
+import Architecture from './components/Architecture/Architecture.js';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
               <Route path='/skills' element={<Skills />} />
               <Route path='/education' element={<Education />} />
               <Route path='/projects' element={<Projects />} />
+              <Route path='/architecture' element={<Architecture />} />
               <Route path='/contact' element={<Contact />} />
             </Routes>
           </div>

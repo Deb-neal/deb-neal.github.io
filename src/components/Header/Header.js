@@ -43,6 +43,13 @@ function Header() {
                 </Link>
               </li>
               <li
+                className={`sub-menu ${location.pathname === '/architecture' ? 'active' : ''}`}
+              >
+                <Link to='/architecture' data-nav-section='architecture'>
+                  └ Architecture
+                </Link>
+              </li>
+              <li
                 className={location.pathname === '/education' ? 'active' : ''}
               >
                 <Link to='/education' data-nav-section='work'>
