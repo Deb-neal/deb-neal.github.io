@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.27e8179e.css",
-    "main.js": "/static/js/main.5d4a08d2.js",
+    "main.js": "/static/js/main.19a2a628.js",
     "static/js/453.96698978.chunk.js": "/static/js/453.96698978.chunk.js",
     "static/media/localo.png": "/static/media/localo.3c689bc5deb46af84631.png",
     "static/media/gyeongbuk.png": "/static/media/gyeongbuk.c1dbdd9fae775278af2e.png",
@@ -15,17 +15,18 @@
     "static/media/infra.png": "/static/media/infra.41056c906958102aae54.png",
     "static/media/aisurvey.png": "/static/media/aisurvey.8c4000ac100508aca300.png",
     "static/media/aihighlight.png": "/static/media/aihighlight.2bc07395cc721b052d1d.png",
+    "static/media/movie2.jpg": "/static/media/movie2.8cb3bb6493e2b70700fe.jpg",
     "static/media/gcp 아키텍처.png": "/static/media/gcp 아키텍처.80960470d3be6c5ce6bc.png",
     "static/media/aws.png": "/static/media/aws.a4e8292273ae5ab1f305.png",
     "static/media/my.jpeg": "/static/media/my.5a8f18312211114b5fed.jpeg",
     "static/media/studeaming.png": "/static/media/studeaming.b6689f1ace42eac67c71.png",
     "index.html": "/index.html",
     "main.27e8179e.css.map": "/static/css/main.27e8179e.css.map",
-    "main.5d4a08d2.js.map": "/static/js/main.5d4a08d2.js.map",
+    "main.19a2a628.js.map": "/static/js/main.19a2a628.js.map",
     "453.96698978.chunk.js.map": "/static/js/453.96698978.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.27e8179e.css",
-    "static/js/main.5d4a08d2.js"
+    "static/js/main.19a2a628.js"
   ]
 }
