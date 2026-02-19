@@ -11,6 +11,7 @@ import gyeongbukcms from '../../images/gyeongbukcms.png';
 import aisurvey from '../../images/aisurvey.png';
 import aihighlight from '../../images/aihighlight.png';
 import naverblog from '../../images/naverblog.png';
+import adb from '../../images/movie2.jpg';
 
 import ian from '../../images/ian.png';
 import './Projects.css';
@@ -27,13 +28,19 @@ const Project = ({
   links,
   animation,
   contribution,
+  imageStyle,
 }) => (
   <div
     className={`col-md-6 animate-box ${animation} animated`}
     data-animate-effect={animation}
   >
     <div className='project'>
-      <img className='project-image' src={image} alt={title} />
+      <img
+        className='project-image'
+        src={image}
+        alt={title}
+        style={imageStyle}
+      />
       <div className='desc'>
         <div className='con'>
           <h3 className='project-title'>
@@ -120,10 +127,34 @@ Project.propTypes = {
   ),
   animation: PropTypes.string,
   contribution: PropTypes.number,
+  imageStyle: PropTypes.object,
 };
 
 function Projects() {
   const projects = [
+    {
+      image: adb,
+      url: 'https://deb-neal.tistory.com/12',
+      title: '갤럭시 - 공기계 실시간 동기화 (ADB + scrcpy)',
+      contribution: 100,
+      subtitle:
+        'ADB와 scrcpy를 활용한 안드로이드 기기 실시간 화면 미러링 및 액티비티 모니터링 환경 구축',
+      problem:
+        '백엔드 개발자로서 모바일 디바이스의 저수준 동작 원리를 직접 체험하고, 디바이스 간 통신 구조를 이해하기 위한 실습 환경이 필요했다.',
+      solution:
+        'ADB(Android Debug Bridge)와 scrcpy를 활용해 USB 및 Wi-Fi 양방향 연결 환경을 구축. 맥북 터미널에서 갤럭시의 실행 중인 앱/액티비티를 실시간으로 조회하고, scrcpy로 화면 미러링 및 원격 조작까지 구현.',
+      result:
+        'USB·Wi-Fi 모두에서 ADB 연결 성공. 맥북에서 갤럭시 화면 실시간 미러링 및 액티비티 모니터링 구현. ADB 클라이언트-서버 구조, 안드로이드 액티비티 시스템, TCP 5555 포트 기반 통신 원리 습득.',
+      links: [
+        {
+          url: 'https://deb-neal.tistory.com/12',
+          text: '블로그 포스팅 보기',
+          icon: 'icon-data',
+        },
+      ],
+      imageStyle: { opacity: 0.5 },
+      animation: 'fadeInLeft',
+    },
     {
       image: naverblog,
       url: 'http://jenkins.salin.co.kr:7778/',
