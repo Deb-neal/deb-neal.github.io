@@ -289,3 +289,17 @@
   border-color: var(--border-medium);
   transform: scale(1.05);
 }
+.nav-blog-link {
+  color: var(--text-secondary) !important;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-blog-link:hover {
+  color: #ff6b35 !important;
+}
+
+.nav-blog-link i {
+  margin-right: 4px;
+  font-size: 0.75rem;
+}

@@ -14,6 +14,7 @@ import naverblog from '../../images/naverblog.png';
 import adb from '../../images/movie2.jpg';
 
 import ian from '../../images/ian.png';
+import skhynix from '../../images/skhynix-architecture.svg';
 import './Projects.css';
 
 const Project = ({
@@ -44,11 +45,15 @@ const Project = ({
       <div className='desc'>
         <div className='con'>
           <h3 className='project-title'>
-            <a href={url} target='_blank' rel='noreferrer'>
-              {title.startsWith('프로젝트')
-                ? title
-                : `프로젝트${title.startsWith('명') ? title : ': ' + title}`}
-            </a>
+            {url ? (
+              <a href={url} target='_blank' rel='noreferrer'>
+                {title.startsWith('프로젝트') ? title : `프로젝트: ${title}`}
+              </a>
+            ) : (
+              <span>
+                {title.startsWith('프로젝트') ? title : `프로젝트: ${title}`}
+              </span>
+            )}
           </h3>
           {contribution && (
             <div className='contribution-wrapper'>
@@ -132,6 +137,22 @@ Project.propTypes = {
 
 function Projects() {
   const projects = [
+    {
+      image: skhynix,
+      url: null,
+      title: '전사 ERP AI Agent 시스템 구축',
+      contribution: 100,
+      subtitle:
+        '2026.03 ~ 2026.04 | SK Hynix · SAP ERP × LangGraph × 사내 LLM 연동',
+      problem:
+        'SAP FI 모듈 담당자들이 반복적인 전표 처리 업무를 일일이 수작업으로 진행하고 있었다. 자연어로 ERP 기능을 호출할 수 있는 인터페이스를 제공하여 담당자들이 보다 편리하게 업무를 처리할 수 있는 환경을 구축하고자 했다.',
+      solution:
+        'LangGraph / LangFlow 기반 AI Agent 오케스트레이션 구조를 설계하여 자연어 입력을 SAP BAPI 호출로 변환하는 파이프라인 구현. PyRFC를 통한 SAP RFC 연동으로 FI 전표 처리 로직 구축. Python ↔ SAP 간 Decimal/Packed 데이터 타입 매핑 이슈 해결. 커스텀 BAPI 설계 및 SAP 표준 구조 확장 처리. 사내 LLM 서비스와 ERP 기능 간 인터페이스 연동 완료.',
+      result:
+        '자연어 입력만으로 SAP ERP 업무 기능(BAPI) 호출이 가능한 Agent 기반 인터페이스 완성. LangGraph 노드 기반 툴 선택 로직 및 실행 흐름 최적화. SAP 응답 데이터 후처리 및 Agent 응답 품질 개선.',
+      links: [],
+      animation: 'fadeInLeft',
+    },
     {
       image: adb,
       url: 'https://deb-neal.tistory.com/12',

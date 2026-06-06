@@ -16,7 +16,7 @@ function Header() {
         <div className='text center'>
           <img src={picture1} className='author-img' alt='Min su Ann'></img>
           <h1 id='colorlib-logo'>Min su Ann</h1>
-          <div className='version-badge-header'>v4.0</div>
+          <div className='version-badge-header'>v5.0</div>
           <span className='position'>Backend Engineer</span>
         </div>
         <nav id='colorlib-main-menu' role='navigation' className='navbar'>
@@ -60,6 +60,16 @@ function Header() {
                 <Link to='/contact' data-nav-section='contact'>
                   Contact
                 </Link>
+              </li>
+              <li>
+                <a
+                  href='https://deb-neal.tistory.com'
+                  target='_blank'
+                  rel='noreferrer'
+                  className='nav-blog-link'
+                >
+                  <i className='fa fa-pencil'></i> Tech Blog
+                </a>
               </li>
             </ul>
           </div>
