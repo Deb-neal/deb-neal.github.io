@@ -96,17 +96,23 @@ const Project = ({
           )}
 
           <div className='project-links'>
-            {links.map((link, index) => (
-              <a
-                key={index}
-                href={link.url}
-                target='_blank'
-                rel='noreferrer'
-                className='project-link'
-              >
-                <i className={link.icon || 'icon-data'}></i> {link.text}
-              </a>
-            ))}
+            {links.map((link, index) =>
+              link.ended ? (
+                <span key={index} className='project-link ended'>
+                  <i className='fa fa-ban'></i> {link.text}
+                </span>
+              ) : (
+                <a
+                  key={index}
+                  href={link.url}
+                  target='_blank'
+                  rel='noreferrer'
+                  className='project-link'
+                >
+                  <i className={link.icon || 'icon-data'}></i> {link.text}
+                </a>
+              ),
+            )}
           </div>
         </div>
       </div>
@@ -128,6 +134,7 @@ Project.propTypes = {
       url: PropTypes.string,
       text: PropTypes.string,
       icon: PropTypes.string,
+      ended: PropTypes.bool,
     }),
   ),
   animation: PropTypes.string,
@@ -178,7 +185,7 @@ function Projects() {
     },
     {
       image: naverblog,
-      url: 'http://jenkins.salin.co.kr:7778/',
+      url: null,
       title: '네이버 블로그 텍스트&이미지 추출기',
       contribution: 100,
       subtitle:
@@ -189,35 +196,23 @@ function Projects() {
         '수동하는 작업의 시간을 줄이기 위해 Python을 통해 네이버 블로그 내용을 크롤링하여, 텍스트와 이미지를 추출하는 서비스를 구축하였다.',
       result:
         '수동으로 진행하던 작업을, url 입력한번으로 자동으로 추출하는 서비스를 구축하였다.',
-      links: [
-        {
-          url: 'http://jenkins.salin.co.kr:7778/',
-          text: '서비스 바로가기',
-          icon: 'icon-data',
-        },
-      ],
+      links: [{ text: '서비스 종료', ended: true }],
       animation: 'fadeInLeft',
     },
     {
       image: aihighlight,
-      url: 'https://aihi.mirrordays.com/',
+      url: null,
       title: 'AI Highlight 초기 서비스 구축',
       contribution: 50,
       subtitle:
-        '2025.03 ~ 진행 중 | yd-dlp라는 라이브러리를 활용한 유튜브 요약 서비스',
+        '2025.03 ~ 2025.12 | yt-dlp 라이브러리를 활용한 유튜브 요약 서비스',
       problem:
         '유튜브 영상 다운로드 시 IP 차단 및 속도 제한 문제로 서비스 안정성 저하. 수동 배포로 인한 배포 시간 지연 및 장애 발생 시 원인 파악 어려움',
       solution:
         'GCP 기반 프록시 인프라를 구축하여 IP 분산 처리. Jenkins를 활용한 CI/CD 파이프라인 자동화로 배포 프로세스 개선',
       result:
         '유튜브 다운로드 성공률 95% 이상 달성. 배포 시간 단축 및 자동화. 장애 대응 시간 감소',
-      links: [
-        {
-          url: 'https://aihi.mirrordays.com/',
-          text: '서비스 바로가기',
-          icon: 'icon-data',
-        },
-      ],
+      links: [{ text: '서비스 종료', ended: true }],
       animation: 'fadeInLeft',
     },
     {
@@ -244,24 +239,18 @@ function Projects() {
     },
     {
       image: aisurvey,
-      url: 'https://aisurvey.mirrordays.com/',
+      url: null,
       title: 'AI Survey 고도화 작업',
       contribution: 100,
       subtitle:
-        '2025.01 ~ 진행 중 | OpenAI API를 활용한 대화형 설문 생성 서비스',
+        '2025.01 ~ 2025.12 | OpenAI API를 활용한 대화형 설문 생성 서비스',
       problem:
         '초기 프로토타입 단계로 데이터베이스 구조 미정립 및 수동 배포로 인한 서비스 확장성 한계. 사업화 검증 필요',
       solution:
         '서비스 요구사항 분석 후 정규화된 데이터베이스 ERD 설계 및 구축. Jenkins 기반 CI/CD 파이프라인 구축으로 코드 푸시 시 자동 빌드, 테스트, 배포 환경 구성. AI 기반 대화형 설문 생성 프로토타입 완성',
       result:
         '사업화 검증 완료, 배포 자동화로 개발 생산성 50% 향상. 확장 가능한 DB 구조로 향후 기능 추가 용이',
-      links: [
-        {
-          url: 'https://aisurvey.mirrordays.com/',
-          text: '서비스 바로가기',
-          icon: 'icon-data',
-        },
-      ],
+      links: [{ text: '서비스 종료', ended: true }],
       animation: 'fadeInLeft',
     },
     {
@@ -333,7 +322,7 @@ function Projects() {
       title: '경북메타포트 (GB metaport)',
       contribution: 100,
       subtitle:
-        '2023.03 ~ 진행 중 | 경북도청을 모티브로 한 메타버스 서비스 구축 국가사업',
+        '2023.03 ~ 2025.12 | 경북도청을 모티브로 한 메타버스 서비스 구축 국가사업',
       problem:
         '서비스 성능 저하로 사용자 경험 악화. TPS 20 수준으로 동시 접속자 처리에 한계가 있었고, 응답 시간이 3초 이상 소요되어 실시간 메타버스 경험을 제공하기 어려운 상황',
       solution:
@@ -356,7 +345,7 @@ function Projects() {
     },
     {
       image: readyplay,
-      url: 'https://www.readyplay.co.kr/',
+      url: null,
       title: 'Readyplay',
       contribution: 50,
       subtitle:
@@ -367,13 +356,7 @@ function Projects() {
         'WebSocket 기반 실시간 통신 구조 설계 및 구현. Unity와 React Native 간 데이터 동기화 프로토콜 정의. RESTful API와 실시간 이벤트 처리를 결합한 하이브리드 통신 아키텍처 구축',
       result:
         'PC-모바일 간 실시간 동기화 지연시간 200ms 이하 달성. 크로스 플랫폼 사용자 동시 접속 지원으로 서비스 활용도 증가',
-      links: [
-        {
-          url: 'https://youtu.be/DWH8g6cnGw0?si=eQ8NZy7X9qOuikAT',
-          text: '구현 기능 상세보기',
-          icon: 'icon-data',
-        },
-      ],
+      links: [{ text: '서비스 종료', ended: true }],
       animation: 'fadeInRight',
     },
     {

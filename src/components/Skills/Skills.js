@@ -69,6 +69,9 @@ function Skills() {
                 <li>
                   <strong>AWS Certified Developer - Associate</strong> (2025)
                 </li>
+                <li>
+                  <strong>OPIc IM2</strong> — 영어 회화 (2026.06)
+                </li>
               </ul>
               <img
                 src={awsBadge}

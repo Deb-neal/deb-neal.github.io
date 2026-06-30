@@ -7,8 +7,14 @@ function Home() {
     <section className='colorlib-home' data-section='home'>
       <div className='colorlib-narrow-content'>
         <div className='home-header'>
-          <h1>Backend Engineer 안민수</h1>
-          <h2>Backend Engineer • AWS Certified Developer</h2>
+          <span className='status-badge'>
+            <span className='status-dot'></span>
+            Available for new opportunities
+          </span>
+          <h1>
+            Backend Engineer <span className='accent-name'>안민수</span>
+          </h1>
+          <h2>백엔드 · 인프라 · AI 엔지니어 • AWS Certified Developer</h2>
         </div>
 
         <div className='home-content'>

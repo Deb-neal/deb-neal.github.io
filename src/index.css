@@ -1,22 +1,26 @@
 @import './styles/globals.css';
 
-html, body {
+/* Fonts: Pretendard (UI/KR) + JetBrains Mono (code/terminal) */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+html,
+body {
   margin: 0;
   padding: 0;
-  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif !important;
+  font-family: var(--font-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
-  line-height: 1.7;
-  letter-spacing: 0.02em;
-  color: #000000 !important;
-  background: #f8fafc !important;
+  line-height: var(--leading-relaxed);
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  background: var(--bg-primary);
   height: 100%;
   width: 100%;
   overflow-x: hidden;
 }
 
-/* Mobile-first responsive setup */
 * {
   box-sizing: border-box;
 }
@@ -27,36 +31,26 @@ html, body {
   flex-direction: column;
 }
 
+/* Inline code chips — dark, accent-tinted */
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-  background: rgba(0, 245, 255, 0.1);
-  color: #00f5ff;
-  padding: 4px 8px;
-  border-radius: 6px;
-  border: 1px solid rgba(0, 245, 255, 0.3);
-  text-shadow: 0 0 10px rgba(0, 245, 255, 0.8);
+  font-family: var(--font-mono);
+  background: var(--color-primary-light);
+  color: var(--color-primary-hover);
+  padding: 0.15em 0.45em;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-accent);
+  font-size: 0.9em;
 }
 
-/* Override fonts in all components */
-#colorlib-aside, #colorlib-main, .colorlib-heading, .heading-meta,
-.services h3, .panel-heading, .project,
-.home-header h1, .home-header h2, .services h3, .panel-body {
-  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif !important;
-  color: #f8f9fa !important;
+/* Headings / paragraphs default to theme text colors */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
 }
 
-.tech-item span {
-  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif !important;
-  color: #000000 !important;
-}
-
-/* Ensure paragraphs use the correct color */
 p {
-  color: #f8f9fa !important;
+  color: var(--text-secondary);
 }
 
-/* Override heading colors */
-h1, h2, h3, h4, h5, h6, .colorlib-heading {
-  color: #ffffff !important;
+a {
+  color: var(--text-accent);
 }
