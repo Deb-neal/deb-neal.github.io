@@ -38,22 +38,22 @@ function About() {
                     </p>
                     <p>
                       <strong>핵심 성과</strong>
-                      <br />• AWS→KT Cloud 인프라 마이그레이션으로{' '}
-                      <strong>TPS 20→102 (410% 성능 향상)</strong>
-                      <br />• TypeORM 버전업그레이드로{' '}
-                      <strong>빌드 속도 40% 단축</strong>
+                      <br />• VM 2대 + 로드밸런서 수평 확장으로{' '}
+                      <strong>TPS 20→102</strong> (부하 테스트 기준)
+                      <br />• AWS→KT Cloud 인프라 마이그레이션, TypeORM 0.2→0.3
+                      업그레이드
                       <br />
                       • OpenAI Assistant API 기반 AI 챗봇 플랫폼 구축 및
                       서비스화
-                      <br />• Socket.io 실시간 통신으로{' '}
-                      <strong>동시 접속자 100명 + 안정화</strong>
+                      <br />• Socket.io 실시간 통신 서버 구축,{' '}
+                      <strong>행사 기간 동시 접속 약 100명</strong> 운영
                       <br />
                       <br />
                       <strong>주요 기술 스택</strong>
                       <br />• <strong>Backend:</strong> NestJS, Express,
                       Node.js, Socket.io
                       <br />• <strong>Database:</strong> MySQL, MongoDB, Redis
-                      (캐싱 전략)
+                      (세션 저장소)
                       <br />• <strong>Infrastructure:</strong> AWS, KT Cloud,
                       Docker, Jenkins CI/CD
                       <br />• <strong>AI/ML:</strong> OpenAI API, Vector Store,

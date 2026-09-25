@@ -23,8 +23,8 @@ function Home() {
               데이터와 코드로 비즈니스 성과를 만드는 백엔드 엔지니어입니다.
             </strong>
             <br />
-            TPS 410% 향상, 빌드 속도 40% 단축, AI 플랫폼 구축 등 측정 가능한
-            임팩트로 증명하는 개발자입니다.
+            단일 VM을 수평 확장 구조로 전환하고 부하 테스트로 검증하는 등, 직접
+            확인한 결과로 증명하는 개발자입니다.
           </p>
 
           <div className='terminal-section'>
@@ -43,9 +43,9 @@ function Home() {
                 <span className='command'> cat ./achievements.txt</span>
               </div>
               <div className='output'>
-                ✅ TPS 20→102 (410% 성능 향상) | AWS→KT Cloud 마이그레이션
+                ✅ VM 수평 확장 + 로드밸런서로 TPS 20→102 (부하 테스트 기준)
                 <br />
-                ✅ TypeORM 0.2→0.3 업그레이드로 빌드 속도 40% 단축
+                ✅ AWS→KT Cloud 마이그레이션 | TypeORM 0.2→0.3 업그레이드
                 <br />✅ OpenAI 기반 AI 챗봇 플랫폼 구축 및 서비스화 완료
               </div>
 
@@ -65,7 +65,7 @@ function Home() {
               <div className='output'>
                 * d4c8a92 feat: AI 챗봇 Function Calling 구현
                 <br />
-                * b7e3f15 perf: Redis 캐싱으로 응답속도 300ms 단축
+                * b7e3f15 infra: VM 수평 확장 + Redis 세션 공유 구성
                 <br />* a1c9e47 infra: KT Cloud 인프라 마이그레이션 성공
               </div>
             </div>
@@ -87,7 +87,7 @@ function Home() {
                 <span>
                   Redis
                   <br />
-                  <small>캐싱 최적화</small>
+                  <small>세션 저장소</small>
                 </span>
               </div>
               <div className='tech-item'>

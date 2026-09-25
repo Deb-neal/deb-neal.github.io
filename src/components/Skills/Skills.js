@@ -92,7 +92,7 @@ function Skills() {
               </li>
               <li>
                 <strong>레거시 개선:</strong> TypeORM 0.2에서 0.3으로의 버전
-                업그레이드를 통해 빌드 속도 개선 및 코드 안정성 향상
+                업그레이드하며 레거시 쿼리 로직과 Repository 구조 마이그레이션
               </li>
               <li>
                 <strong>KT Cloud 마이그레이션:</strong> AWS 기반 프로젝트를 KT

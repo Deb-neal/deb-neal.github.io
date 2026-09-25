@@ -211,7 +211,7 @@ function Projects() {
       solution:
         'GCP 기반 프록시 인프라를 구축하여 IP 분산 처리. Jenkins를 활용한 CI/CD 파이프라인 자동화로 배포 프로세스 개선',
       result:
-        '유튜브 다운로드 성공률 95% 이상 달성. 배포 시간 단축 및 자동화. 장애 대응 시간 감소',
+        '프록시 VM 간 IP 순환으로 유튜브 다운로드 IP 차단 문제 완화. Jenkins 기반 배포 자동화로 수동 배포 제거',
       links: [{ text: '서비스 종료', ended: true }],
       animation: 'fadeInLeft',
     },
@@ -249,7 +249,7 @@ function Projects() {
       solution:
         '서비스 요구사항 분석 후 정규화된 데이터베이스 ERD 설계 및 구축. Jenkins 기반 CI/CD 파이프라인 구축으로 코드 푸시 시 자동 빌드, 테스트, 배포 환경 구성. AI 기반 대화형 설문 생성 프로토타입 완성',
       result:
-        '사업화 검증 완료, 배포 자동화로 개발 생산성 50% 향상. 확장 가능한 DB 구조로 향후 기능 추가 용이',
+        '사업화 검증 완료. 배포 자동화로 수동 배포 절차 제거. 확장 가능한 DB 구조로 향후 기능 추가 용이',
       links: [{ text: '서비스 종료', ended: true }],
       animation: 'fadeInLeft',
     },
@@ -291,9 +291,8 @@ function Projects() {
     - 복잡한 메타버스 콘텐츠 데이터를 직관적인 UI로 표현`,
 
       result: `콘텐츠 관리 효율성 및 보안성 향상:
-    - 콘텐츠 업데이트 시간: 평균 10분 → 3분 (90% 단축)
-    - 비개발자도 실시간 콘텐츠 수정 가능
-    - 개발자 리소스 절약: 주 10시간 → 운영 업무에서 해방
+    - 비개발자도 개발자 없이 직접 콘텐츠 수정 가능
+    - 콘텐츠 변경 요청에 대한 개발자 대기 제거
     - 보안 강화: IP 제한으로 무단 접근 차단, 공공기관 보안 요구사항 충족
     - 긴급 대응 시간 단축: 당일 대응 가능`,
 
@@ -324,11 +323,11 @@ function Projects() {
       subtitle:
         '2023.03 ~ 2025.12 | 경북도청을 모티브로 한 메타버스 서비스 구축 국가사업',
       problem:
-        '서비스 성능 저하로 사용자 경험 악화. TPS 20 수준으로 동시 접속자 처리에 한계가 있었고, 응답 시간이 3초 이상 소요되어 실시간 메타버스 경험을 제공하기 어려운 상황',
+        '단일 VM으로 운영되어 트래픽 증가 시 과부하가 우려되는 상황. 부하 테스트 결과 약 20 TPS 수준에서 처리 한계 확인',
       solution:
-        'AWS에서 KT Cloud로 인프라 마이그레이션을 진행하고, TypeORM 0.2→0.3 업그레이드를 통한 쿼리 최적화 수행. Redis 기반 캐싱 전략을 도입하여 반복 조회 데이터 처리 속도를 개선하고, JMeter를 활용한 부하 테스트로 병목 지점을 분석 및 해결',
+        'JMeter로 부하 테스트를 설계해 처리 한계를 측정. VM을 2대로 늘리고 로드밸런서로 트래픽을 분산하는 수평 확장 구조로 전환하고, 서버 간 로그인 세션 공유를 위해 Redis를 세션 저장소로 도입. 이 밖에 AWS→KT Cloud 인프라 마이그레이션과 TypeORM 0.2→0.3 업그레이드 수행',
       result:
-        'TPS 20→102로 510% 성능 향상, 응답 시간 70% 단축. 동시 접속자 100명 이상 안정적 처리 가능',
+        '수평 확장 후 부하 테스트 기준 20→102 TPS 확인. 행사 기간 동시 접속 약 100명 규모 서비스 운영',
       links: [
         {
           url: 'https://play.google.com/store/apps/details?id=com.salin.GBMeta&pcampaignid=web_share',
@@ -355,7 +354,7 @@ function Projects() {
       solution:
         'WebSocket 기반 실시간 통신 구조 설계 및 구현. Unity와 React Native 간 데이터 동기화 프로토콜 정의. RESTful API와 실시간 이벤트 처리를 결합한 하이브리드 통신 아키텍처 구축',
       result:
-        'PC-모바일 간 실시간 동기화 지연시간 200ms 이하 달성. 크로스 플랫폼 사용자 동시 접속 지원으로 서비스 활용도 증가',
+        'PC와 모바일 사용자가 같은 가상공간에 동시 접속해 실시간으로 상호작용하는 크로스 플랫폼 환경 구현',
       links: [{ text: '서비스 종료', ended: true }],
       animation: 'fadeInRight',
     },
@@ -371,7 +370,7 @@ function Projects() {
       solution:
         'NestJS 기반 API 서버 리팩토링 및 에러 핸들링 강화. Google Firebase Authentication 도입으로 소셜 로그인 및 사용자별 권한 관리 구현. AWS ECS Fargate로 컨테이너 오케스트레이션, CloudFront CDN 적용, S3 라이프사이클 정책 설정으로 인프라 비용 절감',
       result:
-        'API 에러율 15%→2%로 감소. 소셜 로그인 도입으로 회원가입 전환율 35% 향상. AWS 인프라 비용 월 40% 절감',
+        '에러 핸들링 강화로 API 서버 안정성 개선. 소셜 로그인 도입으로 회원가입 절차 간소화. ECS Fargate·CloudFront·S3 라이프사이클 정책 적용으로 인프라 비용 구조 개선',
       links: [
         {
           url: 'https://play.google.com/store/apps/details?id=com.Salin.Localo&pcampaignid=web_share&pli=1',
