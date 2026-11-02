@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { FiMenu, FiX } from 'react-icons/fi';
 import './Header.css';
 import picture1 from '../../images/my.jpeg';
 
 function Header() {
   const location = useLocation();
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  // 모바일에서 메뉴 이동 후 자동으로 닫기
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location.pathname]);
+
   return (
     <section className='colorlib-about' data-section='header'>
       <link
@@ -19,8 +27,18 @@ function Header() {
           <div className='version-badge-header'>v5.0</div>
           <span className='position'>Backend Engineer</span>
         </div>
+        <button
+          type='button'
+          className='nav-toggle'
+          aria-controls='navbar'
+          aria-expanded={menuOpen}
+          aria-label={menuOpen ? '메뉴 닫기' : '메뉴 열기'}
+          onClick={() => setMenuOpen(open => !open)}
+        >
+          {menuOpen ? <FiX /> : <FiMenu />}
+        </button>
         <nav id='colorlib-main-menu' role='navigation' className='navbar'>
-          <div id='navbar' className='collapse'>
+          <div id='navbar' className={`collapse ${menuOpen ? 'in' : ''}`}>
             <ul>
               <li className={location.pathname === '/' ? 'active' : ''}>
                 <Link to='/' data-nav-section='home'>

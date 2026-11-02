@@ -303,3 +303,93 @@
   margin-right: 4px;
   font-size: 0.75rem;
 }
+
+/* 모바일 메뉴 토글 (데스크톱에서는 숨김) */
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+
+.nav-toggle:hover,
+.nav-toggle[aria-expanded='true'] {
+  border-color: var(--border-accent);
+  color: var(--color-primary-hover);
+}
+
+/* 모바일: 사이드바를 상단 바로 축소 */
+@media screen and (max-width: 992px) {
+  .container-wrap {
+    overflow-x: clip;
+  }
+
+  section[data-section='header'] {
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+  }
+
+  #colorlib-aside {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    padding: var(--space-3) var(--space-4);
+    overflow: visible;
+    border-right: none;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  #colorlib-aside .text.center {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+  }
+
+  #colorlib-aside .author-img {
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    padding: 2px;
+    box-shadow: none;
+  }
+
+  #colorlib-aside #colorlib-logo {
+    width: auto;
+    margin: 0;
+    font-size: 1.05rem;
+  }
+
+  #colorlib-aside .version-badge-header,
+  #colorlib-aside .position {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  #colorlib-aside #colorlib-main-menu {
+    min-height: 0;
+    margin: 0;
+  }
+
+  #colorlib-aside #navbar.collapse {
+    display: none;
+  }
+
+  #colorlib-aside #navbar.collapse.in {
+    display: block;
+    padding-top: var(--space-3);
+  }
+}
